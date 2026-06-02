@@ -33,8 +33,7 @@
  */
 
 #include <regex.h>
-#include "../../sqlite/sqlite-amalgamation/sqlite3.h"
-#include "../../sqlite/sqlite-amalgamation/sqlite3.c"
+#include <sqlite3.h>
 #include "../../sqlite/libb64-core/cencode.c"
 #include "../../sqlite/libb64-core/cdecode.c"
 #include "../../sqlite/sqlite3-base64/sqlite3_base64.c"
