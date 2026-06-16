@@ -15,7 +15,12 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = '10.10'
 
   s.preserve_paths = 'README.md', 'LICENSE', 'package.json', 'sqlite.js'
-  s.source_files   = "platforms/ios/*.{h,m}", 'sqlite/sqlite-amalgamation/*.{h,c}', 'sqlite/libb64-core/*.{h,c}'
-
+  s.source_files   = "platforms/ios/*.{h,m}"
+  
+  s.library = 'sqlite3'
   s.dependency 'React-Core'
+  
+  s.xcconfig = {
+    'OTHER_CFLAGS' => '$(inherited) -DSQLITE_HAS_CODEC=0'
+  }
 end
